@@ -63,7 +63,7 @@
     }
 
     autoHidingNavbar.element.removeClass('navbar-hidden').animate({
-      top: 0
+      marginTop: 0
     }, {
       queue: false,
       duration: autoHidingNavbar.settings.animationDuration
