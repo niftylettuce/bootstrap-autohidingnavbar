@@ -32,12 +32,7 @@
       return;
     }
 
-    autoHidingNavbar.element.addClass('navbar-hidden').animate({
-      marginTop: -1 * parseInt(autoHidingNavbar.element.css('height'), 10) + autoHidingNavbar.settings.navbarOffset
-    }, {
-      queue: false,
-      duration: autoHidingNavbar.settings.animationDuration
-    });
+    autoHidingNavbar.element.addClass('hidden');
 
     try {
       $('.dropdown.open .dropdown-toggle, .dropdown.show .dropdown-toggle', autoHidingNavbar.element).dropdown('toggle');
@@ -54,12 +49,7 @@
       return;
     }
 
-    autoHidingNavbar.element.removeClass('navbar-hidden').animate({
-      marginTop: 0
-    }, {
-      queue: false,
-      duration: autoHidingNavbar.settings.animationDuration
-    });
+    autoHidingNavbar.element.removeClass('hidden');
     _visible = true;
 
     autoHidingNavbar.element.trigger('show.autoHidingNavbar');
